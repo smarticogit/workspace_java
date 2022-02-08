@@ -7,11 +7,12 @@ public class Banco {
 		double valor;
 		ContaBancaria conta;
 		conta = new ContaBancaria();
-		conta.nomeTitular = "Professor Isidro";
-		conta.cpf = "987.654.321-00";
-		conta.tipo = 2;
-		conta.numeroConta = 123456;
-		conta.saldo = 1000.00;
+//		conta.nomeTitular = "Professor Isidro ";
+		conta.setNomeTitular("Professro Isidro");
+		conta.setCpf("987.654.321-00");
+		conta.setTipo(2);
+		conta.setNumeroConta(123456);
+		conta.setSaldo(1000.00);
 		
 		do {
 			System.out.println("IsiBank - Seu banco na Internerdica!!!");
@@ -34,7 +35,7 @@ public class Banco {
 				}
 				break;
 			case 3:
-				conta.exibirInfo();
+				System.out.println(conta.exibirInfo());
 				break;
 			case 0:
 				System.out.println("obrigado pela preferencia");
