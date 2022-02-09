@@ -10,8 +10,7 @@ public class Livro {
 
 	// aqui temos o método construtor da classe
 	public Livro(String titulo, String autor, String categoria, int anoPubli, int posEstante, int posPrateleira) {
-		super();
-		this.titulo = titulo;
+		this.titulo = titulo;  // setTitulo(titulo)
 		this.autor = autor;
 		this.categoria = categoria;
 		this.anoPubli = anoPubli;
