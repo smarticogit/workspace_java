@@ -1,24 +1,25 @@
+package br.com.isidrocorp.projetotime.core;
 
-public class Time {
+public class LocalTime {
 	private int hora;
 	private int minu;
 	private int segu;
 	
-	public Time(int hora, int minu, int segu) {
+	public LocalTime(int hora, int minu, int segu) {
 		this.hora = hora;
 		this.minu = minu;
 		this.segu = segu;
 	}
 	
-	public Time(int hora, int minu) {
+	public LocalTime(int hora, int minu) {
 		this(hora, minu, 0);
 	}
 	
-	public Time(int hora) {
+	public LocalTime(int hora) {
 		this(hora, 0, 0);
 	}
 	
-	public Time() {
+	public LocalTime() {
 		this(0,0,0);
 	}
 
