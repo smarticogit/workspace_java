@@ -5,11 +5,13 @@ public class Main {
 		Scanner teclado = new Scanner(System.in);
 		double matriz[][] = new double[12][12];
 		double res=0;
-		char op;
+//		char op;
+		String op;
 		int cont=0;
 		
 		// entrada
-		op = teclado.nextLine().charAt(0);
+//		op = teclado.nextLine().charAt(0);
+		op = teclado.nextLine();
 		for (int l=0; l<12; l++) {
 			for (int c=0;c<12;c++) {
 				matriz[l][c] = teclado.nextDouble();
@@ -24,7 +26,7 @@ public class Main {
 			}
 		}
 		
-		if (op == 'S') {
+		if (op.equals("S")) {
 			System.out.printf("%.1f\n", res);
 		}
 		else {
