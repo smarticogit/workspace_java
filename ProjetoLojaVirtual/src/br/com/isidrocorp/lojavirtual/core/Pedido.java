@@ -5,11 +5,7 @@ public class Pedido {
 	private Cliente cliente;         // pelo construtor padrao cliente = null
 	private Produto produto;         // pelo construtor padrao produto = null
 	
-	public Pedido() {
-		data = "11/02/2022";
-		cliente = new Cliente(0,"","");
-		produto = new Produto(0,"",0);
-	}
+	
 	public String getData() {
 		return data;
 	}
