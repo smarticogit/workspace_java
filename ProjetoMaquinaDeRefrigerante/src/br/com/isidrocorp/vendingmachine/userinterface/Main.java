@@ -34,6 +34,7 @@ public class Main {
 				break;
 			case -1:
 				System.out.println("Ate mais");
+				break;
 			case 0: case 1: case 2: case 3: case 4:
 				int resultado = m.comprar(opcao);
 				if (resultado == 0) {
