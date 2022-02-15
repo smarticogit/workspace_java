@@ -12,6 +12,7 @@ public class Estudante extends Pessoa {
 		this.numeroMatricula = numMatricula;
 	}
 	
+	@Override
 	public void mostrar() {
 		System.out.println("Estudante: "+super.nome+"/"+super.email+"/"+super.telefone+"/"+this.numeroMatricula);
 	}
