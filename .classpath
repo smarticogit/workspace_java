@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="GarbageCollection/src"/>
+	<classpathentry kind="src" path="GerenciamentoDeMemoria/src"/>
+	<classpathentry kind="src" path="HelloWorld/src"/>
+	<classpathentry kind="src" path="Palindromo/src"/>
+	<classpathentry kind="src" path="ProjetoArrayTipos/src"/>
+	<classpathentry kind="src" path="ProjetoBiblioteca/src"/>
+	<classpathentry kind="src" path="ProjetoCartaoPrePago/src"/>
+	<classpathentry kind="src" path="ProjetoContaBancaria/src"/>
+	<classpathentry kind="src" path="ProjetoContaBancariaGUI/src"/>
+	<classpathentry kind="src" path="ProjetoLojaVirtual/src"/>
+	<classpathentry kind="src" path="ProjetoMatrizes/src"/>
+	<classpathentry kind="src" path="ProjetoOficina/src"/>
+	<classpathentry kind="src" path="ProjetoStatic/src"/>
+	<classpathentry kind="src" path="ProjetoTime/src"/>
+	<classpathentry kind="src" path="ProjetoTV/src"/>
+	<classpathentry kind="src" path="Uri1184/src"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
