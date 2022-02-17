@@ -12,7 +12,8 @@ public abstract class GameObject {
 		this.imagem = new JLabel(new ImageIcon(filename));
 		this.x = x;
 		this.y = y;
-		System.out.println(imagem.getWidth()+" "+ imagem.getHeight());
+		this.getImagem().setBounds(x, y, 75,75);
+		
 	}
 
 	public JLabel getImagem() {
