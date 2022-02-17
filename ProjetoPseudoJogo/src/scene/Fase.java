@@ -2,6 +2,7 @@ package scene;
 
 import javax.swing.JFrame;
 
+import objects.Fantasma;
 import objects.GameObject;
 import objects.Heroi;
 
@@ -15,11 +16,17 @@ public class Fase extends JFrame implements Runnable {
 		setVisible(true);
 		setLayout(null);
 		
-		objetos = new GameObject[1];
-		objetos[0] = new Heroi("C:\\users\\isidro\\Desktop\\worspace_ifood\\ProjetoPseudoJogo\\mario.png", 50, 50,1);
+		objetos = new GameObject[6];
+		objetos[0] = new Heroi("c:\\users\\isidro\\Desktop\\workspace_ifood\\ProjetoPseudoJogo\\mario.png", 100, 100,1);
+		objetos[1] = new Fantasma("c:\\users\\isidro\\Desktop\\workspace_ifood\\ProjetoPseudoJogo\\ghost.png", 10, 10, 1, 10);
+		objetos[2] = new Fantasma("c:\\users\\isidro\\Desktop\\workspace_ifood\\ProjetoPseudoJogo\\ghost2.png", 150, 10, 1, 15);
+		objetos[3] = new Fantasma("c:\\users\\isidro\\Desktop\\workspace_ifood\\ProjetoPseudoJogo\\ghost3.png", 250, 10, 1, 25);
+		objetos[4] = new Fantasma("c:\\users\\isidro\\Desktop\\workspace_ifood\\ProjetoPseudoJogo\\ghost.png", 350, 10, 1, 10);
+		objetos[5] = new Heroi("c:\\users\\isidro\\Desktop\\workspace_ifood\\ProjetoPseudoJogo\\mario.png", 100, 200,1);
 		
-		getContentPane().add(objetos[0].getImagem());
-		
+		for (GameObject g: objetos) {
+			getContentPane().add(g.getImagem());
+		}
 		Thread t= new Thread(this);
 		t.start();
 		
@@ -27,7 +34,9 @@ public class Fase extends JFrame implements Runnable {
 	}
 	
 	public void update() {
-		
+		for(GameObject g: objetos) {
+			g.update();
+		}
 	}
 	
 	public void draw() {
@@ -53,8 +62,7 @@ public class Fase extends JFrame implements Runnable {
 			catch(InterruptedException ex) {
 				System.err.println("erro ao atualizar o jogo");
 			}
-		}
-		
+		}		
 	}
 
 	

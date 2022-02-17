@@ -2,6 +2,7 @@ package objects;
 
 public class Heroi extends GameObject {
 	private int modo;
+	private int velocidade;
 
 	public Heroi(String filename, int x, int y, int modo) {
 		super(filename, x, y);
