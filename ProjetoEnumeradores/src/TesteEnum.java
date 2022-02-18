@@ -14,6 +14,10 @@ public class TesteEnum {
 //			System.out.println(m.getMesNumerico() + " - " + m);
 //		}
 		
+		Meses mes;
+		mes = Meses.Janeiro;
+		
+		
 		
 		for (Cardapio c: Cardapio.values()){
 			System.out.println(c);
