@@ -1,21 +1,39 @@
 package objects;
 
 public class Heroi extends GameObject {
-	private int modo;
-	private int velocidade;
+	private int dirH;
+	private int dirV;
+	
+	public int getDirH() {
+		return dirH;
+	}
 
-	public Heroi(String filename, int x, int y, int modo) {
+	public void setDirH(int dirH) {
+		this.dirH = dirH;
+	}
+
+	public int getDirV() {
+		return dirV;
+	}
+
+	public void setDirV(int dirV) {
+		this.dirV = dirV;
+	}
+
+	
+
+	public Heroi(String filename, int x, int y) {
 		super(filename, x, y);
-		this.modo = modo;
 	}
 
 	@Override
 	public void update() {
-		this.x = this.x + 5*modo;
-		if (this.x > 480 || this.x <= 0) {
-			this.modo = this.modo * -1;
-		}
+		this.x = this.x + 5 * dirH;
+		this.y = this.y + 5 * dirV;
 	}
+	
+	
+	
 	
 	
 }
