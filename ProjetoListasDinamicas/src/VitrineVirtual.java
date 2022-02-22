@@ -8,6 +8,7 @@ public class VitrineVirtual {
 		lista = new ArrayList<Produto>();
 
 		// como eu faço para adicionar novos produtos?
+		
 		lista.add(new Produto(1, "Produto 01", 100, 1));
 		lista.add(new Produto(2, "Produto 02", 200, 2));
 		lista.add(new Produto(3, "Produto 03", 300, 3));
@@ -17,7 +18,7 @@ public class VitrineVirtual {
 		lista.add(new Produto(7, "Produto 07", 700, 7));
 		lista.add(new Produto(8, "Produto 08", 800, 8));
 		lista.add(new Produto(9, "Produto 09", 900, 9));
-
+		 
 		// preciso do seguinte:
 		Produto maisCaro, maisBarato;
 		double totalEstoque = 0;
@@ -35,8 +36,7 @@ public class VitrineVirtual {
 			}
 			
 			totalEstoque += p.getPreco() * p.getEstoque();
-			qtdItens += p.getEstoque();
-			
+			qtdItens += p.getEstoque();			
 		}
 		
 		System.out.println("Produto Mais caro   = "+maisCaro);
