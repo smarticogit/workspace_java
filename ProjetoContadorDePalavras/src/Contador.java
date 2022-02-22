@@ -1,4 +1,5 @@
 import java.util.HashMap;
+import java.util.Map;
 
 public class Contador {
 	public static void main(String[] args) {
@@ -23,7 +24,10 @@ public class Contador {
 			}
 		}
 		
-		System.out.println(mapa);
+		for (Map.Entry<String, Integer> valor: mapa.entrySet()) {
+			System.out.println(valor.getKey() + " - " + valor.getValue());
+		}
+		//System.out.println(mapa);
 	}
 
 }
