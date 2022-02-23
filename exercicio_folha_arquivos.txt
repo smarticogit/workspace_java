@@ -23,3 +23,11 @@ TIPO ; NUM  ; NOME          ; NUM_HORAS ; VALOR_HORA
 o padrão de linha para o Empreiteiro é
 TIPO ; NUM  ; NOME              ; VL_EMPREITA
 4    ; 1237 ; Pedro Empreiteiro ; 3500.00
+
+
+Qual o objetivo? Você ler o arquivo e calcular a folha de pagamento
+*** Além das classes que você deve implementar (levando em conta a classe abstrata Funcionario)
+
+V1 - Tudo na main, desde a leitura e instanciação dos objetos em um ArrayList (ArrayList.add)
+V2 - Criar um "Conversor de linhas de arquivo para objetos" (mesmo molde da nossa Fábrica) - esse cara pode ficar relativamente grandinho (vocês podem inclusive fazer métodos específicos para criar cada objeto diferente)
+V3 - Comece a pensar em tratar Exceptions (de modo que vocês também consigam lançar suas próprias exceptions)
