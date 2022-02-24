@@ -3,6 +3,7 @@ package br.com.isidrocorp.acme.repo;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 
@@ -39,6 +40,25 @@ public class RepositorioEmArquivo implements FuncionarioRepo {
 		catch(RuntimeException ex) {
 			throw ex;
 		}
+	}
+
+	@Override
+	public void salvarTudo(ArrayList<Funcionario> lista) {
+		try {
+			File arquivo = new File("./recibos.txt");
+			FileWriter escritor = new FileWriter(arquivo);
+			
+			for (Funcionario f: lista) {
+				escritor.write("|   |----------------------------------------------------|   |\n");
+				escritor.write(String.format("| o | Nome: %-30s R$ %10.2f | o |\n", f.getNome(), f.calcularSalario()));
+			}			
+			escritor.close();
+		}
+		catch (IOException ex) {
+			System.err.println("Erro ao gravar recibos");
+			ex.printStackTrace();
+		}
+		
 	}
 
 }

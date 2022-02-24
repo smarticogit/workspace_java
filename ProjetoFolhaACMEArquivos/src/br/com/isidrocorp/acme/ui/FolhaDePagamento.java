@@ -18,14 +18,14 @@ public class FolhaDePagamento {
 
 		try {
 			FuncionarioRepo repo = new RepositorioEmArquivo();
-			//FuncionarioRepo repo = new RepositorioEmMemoria();
+			FuncionarioRepo repo2 = new RepositorioEmMemoria();
 						
 			lista = repo.lerTudo();
 			
-			for (Funcionario f : lista) {
-				System.out.println("|   |----------------------------------------------------|   |");
-				System.out.printf("| o | Nome: %-30s R$ %10.2f | o |\n", f.getNome(), f.calcularSalario());
-			}
+			repo.salvarTudo(lista);
+			repo2.salvarTudo(lista);
+			
+			
 		} catch (DadosInvalidosException ex) {
 			System.err.println("Dados do cadastro de funcionario Invalido");
 		} catch (TipoFuncionarioInvalidoException ex) {

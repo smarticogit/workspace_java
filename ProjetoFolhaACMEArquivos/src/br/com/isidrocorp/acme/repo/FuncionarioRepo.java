@@ -7,5 +7,6 @@ import br.com.isidrocorp.acme.root.Funcionario;
 public interface FuncionarioRepo {
 		
 	public ArrayList<Funcionario> lerTudo();
+	public void salvarTudo(ArrayList<Funcionario> lista);
 
 }

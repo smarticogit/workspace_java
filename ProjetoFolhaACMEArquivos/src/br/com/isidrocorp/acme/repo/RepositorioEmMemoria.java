@@ -26,5 +26,14 @@ public class RepositorioEmMemoria implements FuncionarioRepo {
 		lista.add(new Horista(1230,"Roberto Medeiros", 200, 75.84));
 		return lista;
 	}
+
+	@Override
+	public void salvarTudo(ArrayList<Funcionario> lista) {
+		for (Funcionario f: lista) {
+			System.out.println("|   |----------------------------------------------------|   |");
+			System.out.printf("| o | Nome: %-30s R$ %10.2f | o |\n", f.getNome(), f.calcularSalario());
+		}
+		
+	}
 	
 }
