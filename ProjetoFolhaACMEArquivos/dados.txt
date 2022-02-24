@@ -6,3 +6,5 @@
 3    ; 1239 ; Jose Horista ;   100     ; 60.57	
 4    ; 1240 ; Pedro Empreiteiro ; 3500.00
 4    ; 1241 ; Ana Empreiteira   ; 4250.00
+1;1242;Chefe Mais Novo;5830.0;14.0;1200.0
+2;1243;Mais Um Comissionado;3000.0;32.0

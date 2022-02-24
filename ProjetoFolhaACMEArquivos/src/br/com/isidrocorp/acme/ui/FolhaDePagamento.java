@@ -36,5 +36,4 @@ public class FolhaDePagamento {
 			System.err.println("Erro desconhecido");
 		}
 	}
-
 }

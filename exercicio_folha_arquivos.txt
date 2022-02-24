@@ -37,3 +37,8 @@ Sugestão de organização
 - package para a  fábrica de funcionários (factory)
 - package para as exceções (exceptions)
 - package para a classe principal (main)
+
+Agora vamos criar uma abstração para nosso modelo de exibição de dados
+V1 - ao invés de mostrar na tela, grave tudo num arquivo (na própria MAIN)
+V2 - crie uma classe que tenha algum método que receba a lista de funcionários e grave-a num arquivo
+V3 - crie uma interface que tenha esse método e 2 implementações (A que já vai existir gravando em arquivos e uma 2a que exiba na tela)
