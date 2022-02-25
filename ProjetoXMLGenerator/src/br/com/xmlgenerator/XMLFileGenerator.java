@@ -8,7 +8,7 @@ public class XMLFileGenerator {
 			String filename = o.getClass().getSimpleName()+".xml";
 			FileWriter arquivo = new FileWriter(filename);
 			
-			arquivo.write(XMLGenerator.generateXML(o));
+			arquivo.write(XMLGenerator.generateXML(o, XMLGenerator.COM_CABECALHO));
 			
 			arquivo.close();
 			

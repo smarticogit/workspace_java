@@ -5,13 +5,16 @@ public class Produto {
 	private String descricao;
 	private double preco;
 	private String linkFoto;
+	private Departamento departamento;
 	
-	public Produto(int id, String descricao, double preco, String linkFoto) {
+	
+	public Produto(int id, String descricao, double preco, String linkFoto, Departamento departamento) {
 		super();
 		this.id = id;
 		this.descricao = descricao;
 		this.preco = preco;
 		this.linkFoto = linkFoto;
+		this.departamento = departamento;
 	}
 	public int getId() {
 		return id;
