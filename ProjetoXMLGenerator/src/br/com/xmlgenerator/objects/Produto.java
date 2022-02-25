@@ -1,4 +1,4 @@
-package br.com.xmlgenerator;
+package br.com.xmlgenerator.objects;
 
 public class Produto {
 	private  int id;
@@ -6,7 +6,13 @@ public class Produto {
 	private double preco;
 	private String linkFoto;
 	
-	
+	public Produto(int id, String descricao, double preco, String linkFoto) {
+		super();
+		this.id = id;
+		this.descricao = descricao;
+		this.preco = preco;
+		this.linkFoto = linkFoto;
+	}
 	public int getId() {
 		return id;
 	}
