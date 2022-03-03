@@ -4,13 +4,16 @@ import java.io.FileReader;
 
 public class LeitorDeArquivos {
 	public static void main(String[] args) {
+		File arquivo=null;
+		FileReader leitor=null;
+		BufferedReader br=null;
 		try {
 			// a classe File indica que eu preciso manipular aquele arquivo com o nome
 			// ALUNOS.TXT
-			File arquivo = new File("./alunos.txt");
+			arquivo = new File("./alunos.txt");
 
 			// com a classe FileReader eu vou manipular este arquivo para LEITURA
-			FileReader leitor = new FileReader(arquivo);
+			leitor = new FileReader(arquivo);
 			
 			/* possíveis variações 
 			 *  FileReader leitor = new FileReader("./alunos.txt");
@@ -19,7 +22,7 @@ public class LeitorDeArquivos {
 			 */
 
 			// agora preciso fazer as leituras
-			BufferedReader br = new BufferedReader(leitor);
+			br = new BufferedReader(leitor);
 
 			String dadosAluno = "";
 			do {
@@ -36,6 +39,8 @@ public class LeitorDeArquivos {
 					}
 				}
 			} while (dadosAluno != null);
+			br.close();
+			leitor.close();	
 		} catch (Exception ex) {
 			System.out.println("Deu algum ruim");
 			ex.printStackTrace();

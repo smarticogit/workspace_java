@@ -31,3 +31,14 @@ Qual o objetivo? Você ler o arquivo e calcular a folha de pagamento
 V1 - Tudo na main, desde a leitura e instanciação dos objetos em um ArrayList (ArrayList.add)
 V2 - Criar um "Conversor de linhas de arquivo para objetos" (mesmo molde da nossa Fábrica) - esse cara pode ficar relativamente grandinho (vocês podem inclusive fazer métodos específicos para criar cada objeto diferente)
 V3 - Comece a pensar em tratar Exceptions (de modo que vocês também consigam lançar suas próprias exceptions)
+
+Sugestão de organização
+- package para as classes que armazenam os dados dos funcionários (model)
+- package para a  fábrica de funcionários (factory)
+- package para as exceções (exceptions)
+- package para a classe principal (main)
+
+Agora vamos criar uma abstração para nosso modelo de exibição de dados
+V1 - ao invés de mostrar na tela, grave tudo num arquivo (na própria MAIN)
+V2 - crie uma classe que tenha algum método que receba a lista de funcionários e grave-a num arquivo
+V3 - crie uma interface que tenha esse método e 2 implementações (A que já vai existir gravando em arquivos e uma 2a que exiba na tela)
