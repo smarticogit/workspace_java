@@ -1,6 +1,7 @@
 package br.com.isidrocorp.acme.ui;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 
 import br.com.isidrocorp.acme.repo.FuncionarioRepo;
 import br.com.isidrocorp.acme.repo.RepositorioEmArquivo;
@@ -22,18 +23,41 @@ public class FolhaDePagamento {
 						
 			lista = repo.lerTudo();
 			
-			repo.salvarTudo(lista);
-			repo2.salvarTudo(lista);
+			
+			System.out.println("---->>>>  Teste 1 - Imprimindo por ordem alfabetica...");
+			lista.stream().sorted(Comparator.comparing(f->f.getNome())).forEach(f->{
+				System.out.println("|   |----------------------------------------------------|   |");
+				System.out.printf("| o | Nome: %-30s R$ %10.2f | o |\n", f.getNome(), f.calcularSalario());
+			});
+			
+			
+			System.out.println("\n\n");
+			System.out.println("---->>>>  Teste 2 - Imprimindo por ordem salarial...");
+			lista.stream().sorted(Comparator.comparing(f->f.calcularSalario())).forEach(f->{
+				System.out.println("|   |----------------------------------------------------|   |");
+				System.out.printf("| o | Nome: %-30s R$ %10.2f | o |\n", f.getNome(), f.calcularSalario());
+			});
+			
+			System.out.println("\n\n");
+			System.out.println("---->>>>  Teste 3 - Imprimindo por ordem de numero...");
+			lista.stream().sorted(Comparator.reverseOrder())
+					      .forEach(f->{
+					    	  System.out.println("|   |----------------------------------------------------|   |");
+					    	  System.out.printf("| o | Nome: %-30s R$ %10.2f | o |\n", f.getNome(), f.calcularSalario());
+			                });
+			//repo.salvarTudo(lista);
+			//repo2.salvarTudo(lista);
 			
 			
 		} catch (DadosInvalidosException ex) {
 			System.err.println("Dados do cadastro de funcionario Invalido");
 		} catch (TipoFuncionarioInvalidoException ex) {
-			System.out.println("N„o tem regra para est tipo de funcionario");
+			System.out.println("N√£o tem regra para est tipo de funcionario");
 		} catch (EstruturaDeFuncionarioInvalida ex) {
-			System.err.println("Funcionario com estrutura de informaÁ„o Inv·lida");
+			System.err.println("Funcionario com estrutura de informa√ß√£o Inv√°lida");
 		} catch (Exception ex) {
 			System.err.println("Erro desconhecido");
+			ex.printStackTrace();
 		}
 	}
 }

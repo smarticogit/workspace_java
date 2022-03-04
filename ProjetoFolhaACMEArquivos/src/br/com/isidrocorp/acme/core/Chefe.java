@@ -48,6 +48,8 @@ public class Chefe extends Funcionario {
 		return "Chefe [numeroFuncional=" + numeroFuncional + ", nome=" + nome + ", salarioBase=" + salarioBase
 				+ ", adicionalFuncao=" + adicionalFuncao + ", beneficioTerno=" + beneficioTerno + "]";
 	}
+
+
 	
 	
 

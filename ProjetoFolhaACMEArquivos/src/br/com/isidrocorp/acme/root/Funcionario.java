@@ -1,21 +1,21 @@
 package br.com.isidrocorp.acme.root;
 
 /**
- * Classe funcionario que é a raiz de todas as classes. É uma classe abstrata que nos permite
+ * Classe funcionario que ï¿½ a raiz de todas as classes. ï¿½ uma classe abstrata que nos permite
  * criar toda a hireraquia polimorfica de fucionarios
  * 
  * @version 1.0
  * @author isidro
  *
  */
-public abstract class Funcionario {
+public abstract class Funcionario  implements Comparable<Funcionario>{
 	protected int numeroFuncional;
 	protected String nome;
 	
 	/**
-	 * Construtor padrão da classe
+	 * Construtor padrï¿½o da classe
 	 * @param numeroFuncional - o numero de registro do funcionario
-	 * @param nome - seu nome até 100 caracteres
+	 * @param nome - seu nome atï¿½ 100 caracteres
 	 */
 	public Funcionario(int numeroFuncional, String nome) {
 		super();
@@ -24,8 +24,8 @@ public abstract class Funcionario {
 	}
 
 	/**
-	 * Classe da regra de negócio que precisa ser implementada nas subclasses
-	 * @return o valor do salário a ser calculado
+	 * Classe da regra de negï¿½cio que precisa ser implementada nas subclasses
+	 * @return o valor do salï¿½rio a ser calculado
 	 */
 	public abstract double calcularSalario();
 	
@@ -45,7 +45,16 @@ public abstract class Funcionario {
 		this.nome = nome;
 	}
 	
-	
-	
-
+	@Override
+	public int compareTo(Funcionario f) {
+		if (this.calcularSalario() < f.calcularSalario()) {
+			return -1;
+		}
+		else if (this.calcularSalario() > f.calcularSalario() ) {
+			return 1;
+		}
+		else {
+			return 0;
+		}
+	}
 }
