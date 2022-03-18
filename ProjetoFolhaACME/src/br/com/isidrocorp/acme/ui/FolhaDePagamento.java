@@ -27,6 +27,5 @@ public class FolhaDePagamento {
 			System.out.printf ("|   | Nome: %-30s R$ %10.2f |   |\n", f.getNome(), f.calcularSalario());
 		}
 	}
-
 }
 

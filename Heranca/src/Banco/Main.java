@@ -9,10 +9,14 @@ public class Main {
 		Conta c1 = new Conta("Daniel", "308...", 1, 1000);
 		ContaEspecial c2 = new ContaEspecial("Daniel", "308...", 2, 800, 2000);
 		
-		c1.exibirInfo();
-		c2.exibirInfo();
-		c2.debitar(1200);
-		c2.exibirInfo();
-
+		try {
+			
+			c1.creditar(-10);
+			c2.debitar(0);
+			
+		} catch (ProdutoException e) {
+			System.err.println("Erro: "+e.getMessage());
+			System.err.println("Valor: "+e.getValorInvalido());
+		}
 	}
 }

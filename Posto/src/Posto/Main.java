@@ -46,8 +46,6 @@ public class Main {
 		
 		switch(opcao) {
 		case 1:
-			valor = 
-			
 			break;
 		case 2:
 			b1.setTipoCombustivel("Valor");

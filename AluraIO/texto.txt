@@ -1,0 +1,4 @@
+Testando leitura de arquivo através do java!
+Existe mais de uma forma de ler um arquivo.
+Mas vamos ver algumas formas.
+Vamos progedir passo a passo.

@@ -1,5 +1,7 @@
 package Classes;
 
+import Banco.ProdutoException;
+
 public class Conta {
 	protected String nomeTitular;
 	protected String cpf;
@@ -18,13 +20,19 @@ public class Conta {
 		System.out.printf("Titular: %s \n CPF: %s \n Saldo: %.2f\n", nomeTitular, cpf, saldo);
 	}
 	
-	public void debitar (double valor) {
+	public void debitar (double valor) throws ProdutoException {
+		if (valor <= 0) {
+			throw new ProdutoException("Valor Inválido para débito", valor);
+		}
 		if (valor > saldo) {
 			System.out.println("Saldo insuficiente");
 		}
 	}
 	
-	public void creditar (double valor) {
+	public void creditar (double valor) throws ProdutoException {
+		if (valor <= 0) {
+			throw new ProdutoException("Valor Inválido para crédito", valor);
+		}
 		
 	}
 
